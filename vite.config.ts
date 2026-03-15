@@ -6,7 +6,7 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/gtm-test/', // <-- ВОТ ЭТА СТРОЧКА ИСПРАВИТ БЕЛЫЙ ЭКРАН
+    base: '/', // <-- ВОТ ЭТА СТРОЧКА ИСПРАВИТ БЕЛЫЙ ЭКРАН
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
